@@ -1,5 +1,4 @@
-# Studying the Steady-State Body Shape of a Falling Immersed Body
-## "Bubble Translation"
+# Studying the Steady-State Body Shape of a Falling Immersed Body: The "Bubble Translation"
 
 
 ## The System
