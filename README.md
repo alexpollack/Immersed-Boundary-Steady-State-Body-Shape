@@ -32,4 +32,5 @@ To test this, I ran the system with various bodies of relatively similar initial
 
 # Body Shapes
 Standard shapes:
-![alt text](/graphics/gender_race.png "Standard Shapes")
+
+![alt text](/images/oval_circle.png "Standard Shapes")
