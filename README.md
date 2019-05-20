@@ -115,4 +115,4 @@ It instead appeared that they were all relatively similar, with Circle having th
 * On average the initial shape did not effect the rate of change of the area dramatically, while for certain shapes the area change spiked in the beginning, by the end of the max time the trends were all on a relatively similar path
 
 
-#### .AVI Video Files Can Be Found in Videos Folder
+#### Run main file to generate .avi videos of each shape
