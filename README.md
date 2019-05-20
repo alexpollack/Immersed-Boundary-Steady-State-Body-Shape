@@ -5,11 +5,18 @@
   The system of interest was that of a 2D closed body, immersed in a fluid, falling through that fluid. The body was created with a set number of body boundary points. The body was set to fall by creating a downward force applied equally across each point of the body, essentially giving it an equally distributed weight (and there for equal mass distribution) across the surface. To avoid rapid downward acceleration, the fluid was given a uniform upward (normal) force to counter this to create a simulated pseudo terminal velocity that the object reaches.
 
 ## Selection of constant values: Ks, Kb, Fd, Fn
-  For a stable body and system, it was found the best selections for the stretching and bending force constants Ks and Kb were when Ks was relatively small and Kb was relatively large (relative to the system components, that is)
+### Body Forces in MATLAB
+* Fs = Ks*(abs(X(kp,:)-X)/(dtheta)-1).*((X-X(kp,:))./abs(X(kp,:)-X));
+* Fb = Kb*1*(X(kp,:)+X(km,:)-2*X)/(dtheta*dtheta);
+* F = Fs + Fb;
+  * dtheta = Δ𝑠, kp/km cycle through points +/-1.0 from k respectively
+
+
+For a stable body and system, it was found the best selections for the stretching and bending force constants Ks and Kb were when Ks was relatively small and Kb was relatively large (relative to the system components, that is)
 * Ks set around 0.0005
 * Kb set around 1.0
 
-  Let Fd and Fn be downward body force (weight) and fluid normal force (upward) respectively, it was found to be most stable when they were roughly around the ratio Fd : Fn ≈1:16
+Let Fd and Fn be downward body force (weight) and fluid normal force (upward) respectively, it was found to be most stable when they were roughly around the ratio Fd : Fn ≈1:16
 * Fd set around 0.08 ( magnitude = -0.08 since downward force, subtracted each timestep) 
 * Fn set around 0.005
 
